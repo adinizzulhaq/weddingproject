@@ -72,6 +72,7 @@ body {
 
 .mynavbar .offcanvas {
   height: 100vh;
+  width: 100vh;
 }
 
 .mynavbar .navbar-brand,
@@ -91,8 +92,8 @@ body {
   background-size: cover;
   min-height: 100vh;
   margin-top: -6rem;
-  padding-top: 15rem;
-  padding-bottom: 5rem;
+  padding-top: 10rem;
+  padding-bottom: 8rem;
 }
 
 .home h2 {
@@ -367,6 +368,7 @@ body {
   background-color: var(--pink);
   color: white;
   border: 1px solid var(--pink);
+  margin-top: 1.3rem;
 }
 
 .rsvp button:hover {
@@ -550,13 +552,17 @@ footer li {
   }
 
   .timeline li .timeline-image {
-    width: 80px;
-    height: 80px;
+    width: 90px;
+    height: 90px;
   }
 
   .timeline li .timeline-panel {
     width: 65%;
-    transform: translateX(-20px);
+    transform: translateX(-5px);
+    -webkit-transform: translateX(-5px);
+    -moz-transform: translateX(-5px);
+    -ms-transform: translateX(-5px);
+    -o-transform: translateX(-5px);
   }
 
   .timeline li .timeline-panel::before {

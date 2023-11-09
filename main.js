@@ -26,52 +26,52 @@ simplyCountdown(".simply-countdown", {
   },
 });
 
-// Disable Scroll
-const rootElement = document.querySelector(":root");
-const audioIconWrapper = document.querySelector(".audio-icon-wrapper");
-const audioIcon = document.querySelector(".audio-icon-wrapper i");
-const song = document.querySelector("#song");
-let isPlaying = false;
+// // Disable Scroll
+// const rootElement = document.querySelector(":root");
+// const audioIconWrapper = document.querySelector(".audio-icon-wrapper");
+// const audioIcon = document.querySelector(".audio-icon-wrapper i");
+// const song = document.querySelector("#song");
+// let isPlaying = false;
 
-function disableScroll() {
-  scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
-  window.onscroll = function () {
-    window.scrollTo(scrollTop, scrollLeft);
-  };
+// function disableScroll() {
+//   scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+//   scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+//   window.onscroll = function () {
+//     window.scrollTo(scrollTop, scrollLeft);
+//   };
 
-  rootElement.style.scrollBehavior = "auto";
-}
+//   rootElement.style.scrollBehavior = "auto";
+// }
 
-// Enable Scroll
-function enableScroll() {
-  window.onscroll = function () {};
-  rootElement.style.scrollBehavior = "smooth";
-  playAudio();
-}
+// // Enable Scroll
+// function enableScroll() {
+//   window.onscroll = function () {};
+//   rootElement.style.scrollBehavior = "smooth";
+//   playAudio();
+// }
 
-// Menjalankan Fungsi Audio
-function playAudio() {
-  audioIconWrapper.style.display = "flex";
-  song.play();
-  isPlaying = true;
-}
+// // Menjalankan Fungsi Audio
+// function playAudio() {
+//   audioIconWrapper.style.display = "flex";
+//   song.play();
+//   isPlaying = true;
+// }
 
-audioIconWrapper.onclick = function () {
-  if (isPlaying) {
-    song.pause();
-    audioIcon.classList.remove("bi-disc");
-    audioIcon.classList.add("bi-pause-circle");
-  } else {
-    song.play();
-    audioIcon.classList.add("bi-disc");
-    audioIcon.classList.remove("bi-pause-circle");
-  }
+// audioIconWrapper.onclick = function () {
+//   if (isPlaying) {
+//     song.pause();
+//     audioIcon.classList.remove("bi-disc");
+//     audioIcon.classList.add("bi-pause-circle");
+//   } else {
+//     song.play();
+//     audioIcon.classList.add("bi-disc");
+//     audioIcon.classList.remove("bi-pause-circle");
+//   }
 
-  isPlaying = !isPlaying;
-};
+//   isPlaying = !isPlaying;
+// };
 
-disableScroll();
+// disableScroll();
 
 // Menjalankan Fungsi Spreadsheet
 window.addEventListener("load", function () {
