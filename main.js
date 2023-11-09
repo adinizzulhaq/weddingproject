@@ -1,4 +1,4 @@
-// Memunculkan Offcanvas Navbar
+// Memunculkan Navbar Offcanvas
 const stickyTop = document.querySelector(".sticky-top");
 const offcanvas = document.querySelector(".offcanvas");
 
@@ -6,20 +6,21 @@ offcanvas.addEventListener("show.bs.offcanvas", function () {
   stickyTop.style.overflow = "visible";
 });
 
-// Menghilangkan White Screen Berlebih
-const offCanvas = document.querySelector(".offcanvas");
-
-offCanvas.addEventListener("hidden.bs.offcanvas", function () {
+// Menghilangkan Bug White Screen Berlebih Pada Layar Mobile
+offcanvas.addEventListener("hidden.bs.offcanvas", function () {
   stickyTop.style.overflow = "hidden";
 });
 
-// Disable Scroll Diawal
+// Disable Scroll
 const rootElement = document.querySelector(":root");
+const audioIconWrapper = document.querySelector(".audio-icon-wrapper");
+const audioIcon = document.querySelector(".audio-icon-wrapper i");
+const song = document.querySelector("#song");
+let isPlaying = false;
 
 function disableScroll() {
   scrollTop = window.pageYOffset || document.documentElement.scrollTop;
   scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
-
   window.onscroll = function () {
     window.scrollTo(scrollTop, scrollLeft);
   };
@@ -34,19 +35,12 @@ function enableScroll() {
   playAudio();
 }
 
-// Play Audio
-const bgm = document.querySelector("#song");
-const audioIconWrapper = document.querySelector(".audio-icon-wrapper");
-const audioIcon = document.querySelector(".audio-icon-wrapper i");
-
+// Menjalankan Fungsi Audio
 function playAudio() {
   audioIconWrapper.style.display = "flex";
   song.play();
   isPlaying = true;
 }
-
-// Paus Audio
-let isPlaying = false;
 
 audioIconWrapper.onclick = function () {
   if (isPlaying) {
@@ -64,7 +58,7 @@ audioIconWrapper.onclick = function () {
 
 disableScroll();
 
-// Script Untuk Form Spreadsheet
+// Menjalankan Fungsi Spreadsheet
 window.addEventListener("load", function () {
   const form = document.getElementById("my-form");
   form.addEventListener("submit", function (e) {
@@ -79,3 +73,12 @@ window.addEventListener("load", function () {
     });
   });
 });
+
+// Menjalankan Fungsi Nama Undangan
+const urlParams = new URLSearchParams(window.location.search);
+const nama = urlParams.get("n") || "";
+const pronoun = urlParams.get("p") || "Bapak/Ibu/Saudara/i";
+const namaContainer = document.querySelector(".hero h4 span");
+namaContainer.innerText = `${pronoun} ${nama},`.replace(/ ,$/, ",");
+
+document.querySelector("#nama").value = nama;
