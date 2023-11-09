@@ -7,9 +7,9 @@
 body {
   font-size: 1.2rem;
   font-family: "Work Sans", sans-serif;
-  min-height: 4000px;
 }
 
+/* Hero Section */
 .hero::before {
   content: "";
   position: absolute;
@@ -59,6 +59,12 @@ body {
   color: white;
 }
 
+.hero a:hover {
+  background-color: var(--pink) !important;
+  color: white !important;
+}
+
+/* Navbar Section */
 .mynavbar {
   background-color: rgba(255, 255, 255, 0.3) !important;
   backdrop-filter: blur(4px);
@@ -79,6 +85,7 @@ body {
   text-transform: uppercase;
 }
 
+/* Home Section */
 .home {
   background-image: url(img/bg-home.jpg);
   background-size: cover;
@@ -88,12 +95,7 @@ body {
   padding-bottom: 5rem;
 }
 
-.home h2,
-.info h2,
-.story h2,
-.gallery h2,
-.rsvp h2,
-.gifts h2 {
+.home h2 {
   color: var(--pink);
   font-family: "Sacramento";
   font-size: 5rem;
@@ -142,11 +144,19 @@ body {
   color: var(--pink);
 }
 
+/* Info Section */
 .info {
   background-color: var(--bg);
   color: white;
   padding-top: 10rem;
   padding-bottom: 8rem;
+}
+
+.info h2 {
+  color: var(--pink);
+  font-family: "Sacramento";
+  font-size: 5rem;
+  font-weight: bold;
 }
 
 .info .alamat {
@@ -180,17 +190,20 @@ body {
   font-weight: 300;
 }
 
-.story,
-.gallery,
-.rsvp,
-.gifts {
+/* Story Section */
+.story {
   padding-top: 10rem;
   padding-bottom: 8rem;
 }
 
-.story span,
-.gallery span,
-.gifts span {
+.story h2 {
+  color: var(--pink);
+  font-family: "Sacramento";
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+.story span {
   text-transform: uppercase;
   color: #666;
   font-size: 0.9rem;
@@ -199,14 +212,12 @@ body {
   margin-bottom: 1rem;
 }
 
-.story p,
-.gallery p,
-.rsvp p,
-.gifts p {
+.story p {
   font-size: 1rem;
   font-weight: 300;
 }
 
+/* Timeline Section */
 .timeline {
   list-style: none;
   padding: 1.4rem 0;
@@ -304,24 +315,52 @@ body {
   right: auto;
 }
 
+/* Gallery Section */
 .gallery {
+  padding-top: 10rem;
+  padding-bottom: 8rem;
   background-color: #f5f5f5;
 }
 
+.gallery span {
+  text-transform: uppercase;
+  color: #666;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.gallery h2 {
+  color: var(--pink);
+  font-family: "Sacramento";
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+.gallery p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+/* RSVP Section */
 .rsvp {
+  padding-top: 10rem;
+  padding-bottom: 8rem;
   background-color: var(--bg);
 }
 
 .rsvp h2 {
-  font-size: 4.5rem;
+  color: var(--pink);
+  font-family: "Sacramento";
+  font-size: 5rem;
+  font-weight: bold;
 }
 
 .rsvp p {
-  color: white;
-}
-
-.rsvp form label {
-  color: white;
+  font-size: 1rem;
+  font-weight: 300;
+  color: #fff;
 }
 
 .rsvp button {
@@ -336,6 +375,40 @@ body {
   border: 1px solid white;
 }
 
+.rsvp button:active {
+  background-color: white !important;
+  color: var(--pink) !important;
+  border: 1px solid var(--pink) !important;
+}
+
+/* Gift Section */
+.gifts {
+  padding-top: 10rem;
+  padding-bottom: 8rem;
+}
+
+.gifts span {
+  text-transform: uppercase;
+  color: #666;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.gifts h2 {
+  color: var(--pink);
+  font-family: "Sacramento";
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+.gifts p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+/* Footer Section */
 footer {
   padding: 3rem;
   background-color: var(--pink);
@@ -358,13 +431,14 @@ footer li {
   margin: 0.5rem;
 }
 
+/* Audio Section */
 .audio-icon-wrapper {
   width: 4rem;
   height: 4rem;
-  font-size: 4rem;
+  font-size: 3rem;
   position: fixed;
-  bottom: 2.5rem;
-  right: 2rem;
+  bottom: 1rem;
+  right: 1rem;
   cursor: pointer;
   color: white;
   opacity: 0.5;
