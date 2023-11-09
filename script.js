@@ -35,10 +35,32 @@ function enableScroll() {
 }
 
 // Play Audio
+const bgm = document.querySelector("#song");
+const audioIconWrapper = document.querySelector(".audio-icon-wrapper");
+const audioIcon = document.querySelector(".audio-icon-wrapper i");
+
 function playAudio() {
-  const bgm = document.querySelector("#bgm");
+  audioIconWrapper.style.display = "flex";
   song.play();
+  isPlaying = true;
 }
+
+// Paus Audio
+let isPlaying = false;
+
+audioIconWrapper.onclick = function () {
+  if (isPlaying) {
+    song.pause();
+    audioIcon.classList.remove("bi-disc");
+    audioIcon.classList.add("bi-pause-circle");
+  } else {
+    song.play();
+    audioIcon.classList.add("bi-disc");
+    audioIcon.classList.remove("bi-pause-circle");
+  }
+
+  isPlaying = !isPlaying;
+};
 
 disableScroll();
 
