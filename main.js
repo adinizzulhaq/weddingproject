@@ -1,15 +1,22 @@
-// Memunculkan Navbar Offcanvas
+// Memunculkan Dan Menghilangkan Offcanvas
+const hamburgerMenu = document.querySelector(".navbar-toggler");
 const stickyTop = document.querySelector(".sticky-top");
-const offcanvas = document.querySelector(".offcanvas");
+const btnClose = document.querySelector(".btn-close");
+// const navbarNav = document.querySelector(".navbar-nav");
 
-offcanvas.addEventListener("show.bs.offcanvas", function () {
+hamburgerMenu.addEventListener("click", function () {
   stickyTop.style.overflow = "visible";
 });
 
-// Menghilangkan Bug White Screen Berlebih Pada Layar Mobile
-offcanvas.addEventListener("hidden.bs.offcanvas", function () {
+btnClose.addEventListener("click", function () {
   stickyTop.style.overflow = "hidden";
 });
+
+// document.addEventListener("click", function (e) {
+//   if (navbarNav.contains(e.target)) {
+//     stickyTop.style.overflow = "hidden";
+//   }
+// });
 
 // SimplyCountdown
 simplyCountdown(".simply-countdown", {

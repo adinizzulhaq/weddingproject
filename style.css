@@ -72,7 +72,7 @@ body {
 
 .mynavbar .offcanvas {
   height: 100vh;
-  width: 100vh;
+  width: 100vw;
 }
 
 .mynavbar .navbar-brand,
@@ -542,6 +542,10 @@ footer li {
 
 /* mobile phone */
 @media (max-width: 576px) {
+  body {
+    padding: 0;
+  }
+
   html {
     font-size: 60%;
   }
