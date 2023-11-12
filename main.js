@@ -1,22 +1,15 @@
 // Memunculkan Dan Menghilangkan Offcanvas
-const hamburgerMenu = document.querySelector(".navbar-toggler");
 const stickyTop = document.querySelector(".sticky-top");
-const btnClose = document.querySelector(".btn-close");
-// const navbarNav = document.querySelector(".navbar-nav");
+const offCanvas = document.querySelector(".offcanvas");
 
-hamburgerMenu.addEventListener("click", function () {
+offCanvas.addEventListener("show.bs.offcanvas", function () {
   stickyTop.style.overflow = "visible";
+  stickyTop.style.paddingRight = "412px";
 });
 
-btnClose.addEventListener("click", function () {
+offCanvas.addEventListener("hidden.bs.offcanvas", function () {
   stickyTop.style.overflow = "hidden";
 });
-
-// document.addEventListener("click", function (e) {
-//   if (navbarNav.contains(e.target)) {
-//     stickyTop.style.overflow = "hidden";
-//   }
-// });
 
 // SimplyCountdown
 simplyCountdown(".simply-countdown", {
