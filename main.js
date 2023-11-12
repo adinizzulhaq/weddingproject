@@ -1,13 +1,13 @@
 // Memunculkan Dan Menghilangkan Offcanvas
+const hamburgerMenu = document.querySelector(".navbar-toggler");
 const stickyTop = document.querySelector(".sticky-top");
-const offCanvas = document.querySelector(".offcanvas");
+const btnClose = document.querySelector(".btn-close");
 
-offCanvas.addEventListener("show.bs.offcanvas", function () {
+hamburgerMenu.addEventListener("click", function () {
   stickyTop.style.overflow = "visible";
-  stickyTop.style.paddingRight = "412px";
 });
 
-offCanvas.addEventListener("hidden.bs.offcanvas", function () {
+btnClose.addEventListener("click", function () {
   stickyTop.style.overflow = "hidden";
 });
 
